@@ -11,10 +11,12 @@ import java.time.LocalDate;
 
 @Entity
 public class Musica {
+    //entidade musica, onde fica tudo sobre ela, nome, artista e etc
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Size(min=0, max= 100, message = "Musica")
+    //min e max de caracteres e tambem aparece uma mensagem se der tudo certo
     @NotNull
     private String nome;
     //O usuario vai conseguir pesquisar a musica de acordo com o nome dela

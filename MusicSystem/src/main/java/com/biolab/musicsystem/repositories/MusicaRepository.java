@@ -8,3 +8,4 @@ import org.springframework.stereotype.Repository;
 public interface MusicaRepository extends JpaRepository<Musica, Long> {
     Musica findByNome(String nome);
 }
+//ele conversa com o banco, vai buscar a musica pelo nome dela aom invez do id

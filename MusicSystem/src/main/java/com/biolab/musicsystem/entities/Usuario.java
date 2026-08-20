@@ -11,6 +11,7 @@ import java.time.LocalDate;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // o banco vai gerar automaticamente o id do usuario
     private long id;
     @NotNull
     private String nome;

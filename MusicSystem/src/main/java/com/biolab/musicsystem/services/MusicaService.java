@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+//responsavel por cadastrar cada mudança ou login, ou criação
 public class MusicaService {
     private final MusicaRepository musicaRepository;
 
@@ -25,12 +26,14 @@ public class MusicaService {
         musica.setDtLancamento(dto.getDtLancamento());
         musicaRepository.save(musica);
         return dto;
+        //vai adicionar a musica ao banco ou app
     }
 
     public List<MusicaDTO> mostrarMusica(){
         return musicaRepository.findAll().stream().map(musica -> new
                 MusicaDTO(musica.getId(), musica.getNome(), musica.getArtista(),
                 musica.getDtLancamento())).toList();
+        //vai mostrar a musica no banco
     }
 
     public MusicaDTO buscarMusica(String nome){
@@ -40,7 +43,7 @@ public class MusicaService {
         musicaDTO.setArtista(musica.getArtista());
         musicaDTO.setDtLancamento(musica.getDtLancamento());
         return musicaDTO;
-
+//vai bsucar a musica
     }
 
     public String deletar(long id){
@@ -51,6 +54,7 @@ public class MusicaService {
             musicaRepository.deleteAllById(Collections.singleton(id));
             return "Usuario deletado";
         }
+        //vai deletar a musica
     }
 
     public String alterarMusica(String nome, MusicaDTO dto){
@@ -59,4 +63,5 @@ public class MusicaService {
         musicaRepository.save(alterarMusica);
         return "Alterado com sucesso";
     }
+    //vai alterar a musica
 }

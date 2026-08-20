@@ -4,7 +4,7 @@ public class LoginDTO {
 
     private String email;
     private String senha;
-
+//vai ser oque o usuario ira usar para login
     public LoginDTO(){}
 
     public LoginDTO(String email, String senha) {

@@ -8,3 +8,4 @@ import org.springframework.stereotype.Repository;
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     Usuario findByNome(String nome);
 }
+// mesma coisa da musicaRepository, vaio buscar o usuario só q pelo id

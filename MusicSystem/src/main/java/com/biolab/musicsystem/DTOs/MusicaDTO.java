@@ -5,7 +5,7 @@ import com.biolab.musicsystem.entities.Musica;
 import java.time.LocalDate;
 
 public class MusicaDTO {
-
+//isso ira aparecer quando o usuario der o get
     private String nome;
     private String artista;
     private LocalDate dtLancamento;

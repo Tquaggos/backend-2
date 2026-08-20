@@ -11,11 +11,13 @@ public class UsuarioRequest {
     @NotNull
     private String nome;
     @Email
+    //email por causa do email
     @Column(unique = true)
     //@Emal: Indica que o campo deve ter formato de e-mail válido
     //@Column:Faz com que o e-mail seja único no banco de dados
     private String email;
     @Size(min=6, max=20)
+    //max e min de caracteres
     private String senha;
     private LocalDate dtCriacao;
 
