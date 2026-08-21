@@ -21,7 +21,7 @@ public class UsuarioController {
 
     @PostMapping
     public ResponseEntity<?> criarUsuario(@Validated @RequestBody UsuarioRequest request) {
-        return ResponseEntity.ok("Criado com sucesso" + usuarioService.criarUsuario(request));
+        return ResponseEntity.ok("Usuario criado com sucesso" + usuarioService.criarUsuario(request));
     }
 
     @GetMapping

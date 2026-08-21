@@ -1,6 +1,7 @@
 package com.biolab.musicsystem.DTOs;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class UsuarioResponse {
 
@@ -8,9 +9,9 @@ public class UsuarioResponse {
     private String nome;
     private String email;
     private String senha;
-    private LocalDate dtCriacao;
+    private LocalDateTime dtCriacao;
 
-    public UsuarioResponse(long id, String nome, String email, String senha, LocalDate dtCriacao) {
+    public UsuarioResponse(long id, String nome, String email, String senha, LocalDateTime dtCriacao) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -21,6 +22,9 @@ public class UsuarioResponse {
     public UsuarioResponse(){}
 
     public UsuarioResponse(long id, String nome, String email) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
     }
 
     public long getId() {
@@ -55,11 +59,11 @@ public class UsuarioResponse {
         this.senha = senha;
     }
 
-    public LocalDate getDtCriacao() {
+    public LocalDateTime getDtCriacao() {
         return dtCriacao;
     }
 
-    public void setDtCriacao(LocalDate dtCriacao) {
+    public void setDtCriacao(LocalDateTime dtCriacao) {
         this.dtCriacao = dtCriacao;
     }
 }

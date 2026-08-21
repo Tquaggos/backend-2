@@ -19,7 +19,7 @@ public class MusicaController {
 
     @PostMapping
     public ResponseEntity<?> adicionarMusica(@Validated @RequestBody MusicaDTO dto){
-        return ResponseEntity.ok("Adicionado com sucesso" + musicaService.addMusica(dto));
+        return ResponseEntity.ok("Musica adicionada com sucesso" + musicaService.addMusica(dto));
     }
 
     @GetMapping
